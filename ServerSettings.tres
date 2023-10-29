@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ServerSettings" load_steps=4 format=3 uid="uid://dnpowuywubsai"]
+
+[ext_resource type="X509Certificate" path="res://Certificate/X509_Certificate.crt" id="1_6sd7r"]
+[ext_resource type="Script" path="res://ServerSettings.gd" id="1_duamo"]
+[ext_resource type="CryptoKey" path="res://Certificate/X509_Key.key" id="2_gaim2"]
+
+[resource]
+script = ExtResource("1_duamo")
+port = 5511
+key = ExtResource("2_gaim2")
+cert = ExtResource("1_6sd7r")
