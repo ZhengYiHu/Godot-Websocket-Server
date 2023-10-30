@@ -27,7 +27,12 @@ The `Dev` can be set to `true` to bypass any certificate check while testing the
 
 - Essential Synchronization RPCs
 -  Players movement Synchronization Interpolation
--  Packets encoding and decoding
+-  Packets encoding and decoding.
+
+## Shared code
+
+Godot doesn't have a good solution to handle shared codebase between Server and Client that don't belong in the same project.
+What this project does is to simply copy over the `res://DataBuses` folder in the client project, that contains all data structures used while communicating with the client.
 
 ## Why websocket over UDP
 
