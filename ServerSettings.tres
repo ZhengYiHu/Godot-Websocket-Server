@@ -7,5 +7,6 @@
 [resource]
 script = ExtResource("1_duamo")
 port = 5511
+dev = true
 key = ExtResource("2_gaim2")
 cert = ExtResource("1_6sd7r")
