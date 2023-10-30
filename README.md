@@ -1,6 +1,7 @@
 # Godot Websocket Server
 ---
 This is a skeleton for a websocket server made in Godot.
+Client Repository [HERE](https://github.com/ZhengYiHu/Godot-Websocket-Client)
 
 ## How to host the server
 
@@ -36,7 +37,7 @@ What this project does is to simply copy over the `res://DataBuses` folder in th
 
 ## Why websocket over UDP
 
-The main goal of this project was to create an accessible server for web based multiplayer games and since [browser games cannot utilize UPD networks](https://gafferongames.com/post/why_cant_i_send_udp_packets_from_a_browser/), I used a websocket connection for all the packet transfers.
+The main goal of this project was to create an accessible dedicated server for web based multiplayer games and since [browser games cannot utilize UPD networks](https://gafferongames.com/post/why_cant_i_send_udp_packets_from_a_browser/), I used a websocket connection for all the packet transfers.
 
 ## Demo
 
