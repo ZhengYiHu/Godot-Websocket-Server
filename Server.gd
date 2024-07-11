@@ -8,7 +8,7 @@ var playerStates = {}
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var error;
-	if serverSettings.cert && !serverSettings.dev:
+	if serverSettings.cert && serverSettings.use_ssl_certificate:
 		error = multiplayer_peer.create_server(serverSettings.port,"*",TLSOptions.server(serverSettings.key,serverSettings.cert));
 	else: 
 		error = multiplayer_peer.create_server(serverSettings.port,"*");
