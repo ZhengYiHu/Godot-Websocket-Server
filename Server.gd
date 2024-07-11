@@ -7,6 +7,7 @@ var playerStates = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	OS.set_environment("W4CLOUD_GAMESERVER_PORT",str(serverSettings.port)) 
 	var error;
 	if serverSettings.cert && serverSettings.use_ssl_certificate:
 		error = multiplayer_peer.create_server(serverSettings.port,"*",TLSOptions.server(serverSettings.key,serverSettings.cert));
@@ -19,7 +20,10 @@ func _ready():
 	multiplayer.peer_disconnected.connect(PlayerDisconnected)
 
 	multiplayer.set_multiplayer_peer(multiplayer_peer);
-	print("Server Started! Waiting for players");
+	W4GD.game_server.set_server_state(W4GD.game_server.ServerState.READY)
+	print("Server Started in port  %s! Waiting for players"%W4GD.get_server_default_port());
+	
+	
 
 func PlayerConnected(id: int):
 	# Replicate Hierarchy in server
