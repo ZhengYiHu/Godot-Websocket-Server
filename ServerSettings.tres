@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_duamo")
 port = 5511
-dev = true
+use_ssl_certificate = false
